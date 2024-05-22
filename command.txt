@@ -1,0 +1,46 @@
+user (-D) for (--save-dev)
+
+# create the project
+next new nest.js-articles-system
+
+# generate module
+nest g mo moduleName
+
+# generate controller
+nest g co controllerName 
+
+# generate service
+nest g s serviceName 
+
+
+# install bcryptjs
+npm i bcryptjs --save
+npm i -D @types/bcryptjs
+
+
+# install nodemailer
+npm i nodemailer
+npm i -D  @types/nodemailer
+
+
+# install mongoose
+npm i @nestjs/mongoose mongoose
+
+
+# install uuid
+npm i uuid
+
+
+# install casl
+npm i @casl/ability
+
+
+# install passport
+$ npm install --save @nestjs/passport passport passport-local
+$ npm install --save-dev @types/passport-local
+
+
+# install jwt
+$ npm install --save @nestjs/jwt passport-jwt
+$ npm install --save-dev @types/passport-jwt
+

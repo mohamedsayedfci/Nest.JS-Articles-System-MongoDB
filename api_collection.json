@@ -1,0 +1,480 @@
+{
+	"info": {
+		"_postman_id": "f6e45af9-a951-4f50-ab4d-15b10a5961cd",
+		"name": "Nest.JS Articles System MongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19706659"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"eng.mohamed.alabasy@gmail.com\",\r\n    \"password\":\"123456789Aa+\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Mohamed Alabasy\",\r\n    \"email\":\"eng.mohamed.alabasy@gmail.com\",\r\n    \"password\":\"123456789Aa+\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "activate email",
+			"item": [
+				{
+					"name": "activate user email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":108223,\r\n    \"user\":\"9ab9a6d3-55ff-4116-884e-5e7e06043438\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/activate",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"activate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reset password",
+			"item": [
+				{
+					"name": "send code to user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"eng.mohamed.alabasy@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/forgotPassword/checkEmail",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"forgotPassword",
+								"checkEmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":956705,\r\n    \"password\":\"987654321+Aa\",\r\n    \"email\":\"eng.mohamed.alabasy@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/forgotPassword/resetPassword",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"forgotPassword",
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Articles",
+			"item": [
+				{
+					"name": "create new articles",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"title\",\r\n    \"description\":\"description\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/articles",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all articles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/articles",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get articles by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/articles/5b75509e-0156-4221-a7a6-d95f48affa78",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"articles",
+								"5b75509e-0156-4221-a7a6-d95f48affa78"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update article",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"update title\",\r\n    \"description\":\"update description\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/articles/db97ef1c-05f9-4f49-9931-69177d71f55b",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"articles",
+								"db97ef1c-05f9-4f49-9931-69177d71f55b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete article",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/articles/5b75509e-0156-4221-a7a6-d95f48affa78",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"articles",
+								"5b75509e-0156-4221-a7a6-d95f48affa78"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Likes",
+			"item": [
+				{
+					"name": "create like article",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\":\"like\",\r\n    \"article\":\"5b75509e-0156-4221-a7a6-d95f48affa78\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/likes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"likes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all likes on article",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/likes/5b75509e-0156-4221-a7a6-d95f48affa78",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"likes",
+								"5b75509e-0156-4221-a7a6-d95f48affa78"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unLike article",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/likes/795650ca-e4b3-4992-98d4-458b7c6abeec",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"likes",
+								"795650ca-e4b3-4992-98d4-458b7c6abeec"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "create new commet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\":\"comment\",\r\n    \"article\":\"31edaf73-6cff-4452-bbb5-4a8ba047dd4e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/comments",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/comments/5b75509e-0156-4221-a7a6-d95f48affa78",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comments",
+								"5b75509e-0156-4221-a7a6-d95f48affa78"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update comment",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\":\"update comment\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/comments/5a13d6c0-c4c0-4d9f-a908-40bc1f8145e7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comments",
+								"5a13d6c0-c4c0-4d9f-a908-40bc1f8145e7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/comments/5a13d6c0-c4c0-4d9f-a908-40bc1f8145e7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comments",
+								"5a13d6c0-c4c0-4d9f-a908-40bc1f8145e7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:3000",
+			"type": "string"
+		}
+	]
+}
