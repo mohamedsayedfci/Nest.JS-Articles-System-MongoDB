@@ -118,7 +118,7 @@ npm run start:dev
 ### After completing the registration as a new user, you must go to your email to confirm the email through the code sent to you
 
    <img src="https://user-images.githubusercontent.com/93389016/192886872-2c8e9c28-f0a0-4fca-ac30-77f469bb119a.png" alt="Build Status">
-   <img src="https://user-images.githubusercontent.com/93389016/192886906-3bc7efe9-c79e-4379-b502-5c6ad117592c.png" alt="Build Status">
+   <!-- <img src="https://user-images.githubusercontent.com/93389016/192886906-3bc7efe9-c79e-4379-b502-5c6ad117592c.png" alt="Build Status"> -->
 </p>
 
 <hr>
